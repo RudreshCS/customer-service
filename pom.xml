@@ -9,7 +9,7 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>contact_api</artifactId>
+    <artifactId>customer_service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>contact_api</name>
 
