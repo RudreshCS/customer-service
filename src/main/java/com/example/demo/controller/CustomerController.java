@@ -1,32 +1,32 @@
 package com.example.demo.controller;
 
-import com.example.demo.model.Registration;
-import com.example.demo.service.RegistrationService;
+import com.example.demo.model.Customer;
+import com.example.demo.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/registrations")
+@RequestMapping("/api/customers")
 @CrossOrigin("*")
-public class RegistrationController {
+public class CustomerController {
 
     @Autowired
-    private RegistrationService service;
+    private CustomerService service;
 
     @PostMapping
-    public Registration create(@RequestBody Registration r) {
-        return service.save(r);
+    public Customer create(@RequestBody Customer customer) {
+        return service.save(customer);
     }
 
     @GetMapping
-    public List<Registration> getAll() {
+    public List<Customer> getAll() {
         return service.getAll();
     }
 
     @GetMapping("/{id}")
-    public Registration getById(@PathVariable String id) {
+    public Customer getById(@PathVariable String id) {
         return service.getById(id);
     }
 

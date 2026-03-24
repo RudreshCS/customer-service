@@ -1,27 +1,27 @@
 package com.example.demo.service;
 
-import com.example.demo.model.Registration;
-import com.example.demo.repository.RegistrationRepository;
+import com.example.demo.model.Customer;
+import com.example.demo.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class RegistrationService {
+public class CustomerService {
 
     @Autowired
-    private RegistrationRepository repository;
+    private CustomerRepository repository;
 
-    public Registration save(Registration r) {
-        return repository.save(r);
+    public Customer save(Customer customer) {
+        return repository.save(customer);
     }
 
-    public List<Registration> getAll() {
+    public List<Customer> getAll() {
         return repository.findAll();
     }
 
-    public Registration getById(String id) {
+    public Customer getById(String id) {
         return repository.findById(id).orElse(null);
     }
 
